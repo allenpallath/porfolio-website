@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Allen Thomas Pallath — Frontend Engineer</title>
+<title>Allen Thomas Pallath — Senior Softtware Engineer</title>
 <meta name="description" content="Allen Thomas Pallath — Senior Frontend Engineer crafting fast, scalable web experiences in Angular, React, and Next.js." />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c1ff48'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='20' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23c1ff48'/%3E%3Ctext x='90' y='128' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='112' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E">
@@ -59,6 +59,16 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
+  }
+
+  /* Soft dim overlay so text stays readable above the animated bg */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(12, 12, 13, 0.55) 0%, rgba(12, 12, 13, 0.75) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .cursor-dot, .cursor-ring {
@@ -156,7 +166,164 @@
   }
   .topbar .nav-mini a:hover { color: var(--lime); }
   .topbar .nav-mini a:hover::after { transform: scaleX(1); transform-origin: left; }
-  @media (max-width: 700px) { .topbar .nav-mini, .topbar .clock { display: none; } }
+  /* Mobile menu button */
+  .menu-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+    z-index: 110;
+  }
+  .menu-btn:hover { border-color: var(--lime); }
+  .menu-btn span {
+    position: absolute;
+    left: 12px;
+    width: 20px;
+    height: 1.5px;
+    background: var(--lime);
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), top 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.3s;
+  }
+  .menu-btn span:nth-child(1) { top: 16px; }
+  .menu-btn span:nth-child(2) { top: 22px; width: 14px; }
+  .menu-btn span:nth-child(3) { top: 28px; }
+  .menu-btn.open span:nth-child(1) { top: 22px; transform: rotate(45deg); width: 20px; }
+  .menu-btn.open span:nth-child(2) { opacity: 0; }
+  .menu-btn.open span:nth-child(3) { top: 22px; transform: rotate(-45deg); }
+
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 28px 40px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .mobile-menu::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(244, 244, 245, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(244, 244, 245, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .mobile-menu .mm-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--faint);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+  .mobile-menu nav a {
+    font-family: var(--sans);
+    font-size: 44px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), padding-left 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+    border-bottom: 1px solid var(--line);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .mobile-menu.open nav a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: color 0.3s, opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), padding-left 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .mobile-menu.open nav a:nth-child(1) { transition-delay: 0.15s, 0.15s, 0s; }
+  .mobile-menu.open nav a:nth-child(2) { transition-delay: 0.22s, 0.22s, 0s; }
+  .mobile-menu.open nav a:nth-child(3) { transition-delay: 0.29s, 0.29s, 0s; }
+  .mobile-menu.open nav a:nth-child(4) { transition-delay: 0.36s, 0.36s, 0s; }
+  .mobile-menu.open nav a:nth-child(5) { transition-delay: 0.43s, 0.43s, 0s; }
+  .mobile-menu nav a .mm-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--faint);
+    margin-right: 14px;
+    vertical-align: middle;
+  }
+  .mobile-menu nav a:hover, .mobile-menu nav a:active {
+    color: var(--lime);
+    padding-left: 16px;
+  }
+  .mobile-menu nav a .ser {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .mobile-menu .mm-footer {
+    margin-top: auto;
+    padding-top: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mobile-menu .mm-clock {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mobile-menu .mm-clock .live-dot {
+    width: 6px; height: 6px;
+    background: var(--lime);
+    border-radius: 50%;
+    animation: blink 1.4s infinite;
+  }
+  .mobile-menu .mm-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .mobile-menu .mm-socials a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .mobile-menu .mm-socials a:hover { color: var(--lime); }
+
+  body.menu-locked { overflow: hidden; }
+
+  @media (max-width: 700px) {
+    .topbar .nav-mini, .topbar .clock { display: none; }
+    .menu-btn { display: block; }
+  }
+  @media (max-width: 480px) {
+    .mobile-menu nav a { font-size: 36px; }
+  }
 
   /* HERO */
   .hero {
@@ -671,8 +838,27 @@
   }
   .live-link:hover { gap: 14px; letter-spacing: 0.02em; }
   @media (max-width: 800px) {
-    .project { grid-template-columns: 1fr; gap: 30px; }
+    .projects-stack { gap: 56px; }
+    .project { grid-template-columns: 1fr; gap: 22px; }
     .project:nth-child(even) .project-visual { order: 0; }
+    .project-visual { aspect-ratio: 16 / 10; max-width: 520px; margin: 0 auto; width: 100%; }
+    .project-mock { padding: 14px; gap: 8px; }
+    .mock-line { height: 7px; }
+    .mock-line.acc { height: 10px; }
+    .mock-line.acc-2 { height: 8px; }
+    .mock-grid { gap: 8px; }
+    .project-info h3 { font-size: 28px; margin-bottom: 10px; }
+    .project-info .num { font-size: 12px; margin-bottom: 8px; }
+    .project-info p { font-size: 15px; margin-bottom: 18px; }
+    .project-info .tag-row { margin-bottom: 14px; }
+  }
+  @media (max-width: 480px) {
+    .project-visual { aspect-ratio: 16 / 11; }
+    .project-info h3 { font-size: 26px; }
+    .browser-frame { height: 26px; padding: 0 10px; }
+    .browser-frame .dot { width: 6px; height: 6px; }
+    .browser-frame .url { font-size: 9px; padding: 3px 8px; height: 16px; }
+    .project-mock { height: calc(100% - 26px); padding: 12px; }
   }
 
   /* CONTACT */
@@ -887,6 +1073,28 @@
       <a href="#contact">contact</a>
     </div>
     <div class="clock"><span class="live-dot"></span><span id="ist-clock">--:--:--</span> IST</div>
+    <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mm-eyebrow">— Navigation</div>
+  <nav>
+    <a href="#about"><span class="mm-num">01</span>about</a>
+    <a href="#skills"><span class="mm-num">02</span>the <span class="ser">stack</span></a>
+    <a href="#experience"><span class="mm-num">03</span>experience</a>
+    <a href="#projects"><span class="mm-num">04</span>selected <span class="ser">work</span></a>
+    <a href="#contact"><span class="mm-num">05</span>contact</a>
+  </nav>
+  <div class="mm-footer">
+    <div class="mm-clock"><span class="live-dot"></span><span id="ist-clock-m">--:--:--</span> IST · Chennai</div>
+    <div class="mm-socials">
+      <a href="mailto:allenpallath@gmail.com">allenpallath@gmail.com →</a>
+      <a href="https://github.com/allenpallath" target="_blank" rel="noopener">github.com/allenpallath →</a>
+      <a href="https://linkedin.com/in/allenpallath" target="_blank" rel="noopener">linkedin.com/in/allenpallath →</a>
+    </div>
   </div>
 </div>
 
@@ -1265,10 +1473,34 @@ function updateClock() {
   const h = String(ist.getHours()).padStart(2, '0');
   const m = String(ist.getMinutes()).padStart(2, '0');
   const s = String(ist.getSeconds()).padStart(2, '0');
-  document.getElementById('ist-clock').textContent = `${h}:${m}:${s}`;
+  const txt = `${h}:${m}:${s}`;
+  const el1 = document.getElementById('ist-clock');
+  const el2 = document.getElementById('ist-clock-m');
+  if (el1) el1.textContent = txt;
+  if (el2) el2.textContent = txt;
 }
 updateClock();
 setInterval(updateClock, 1000);
+
+// Mobile menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+function setMenu(open) {
+  menuBtn.classList.toggle('open', open);
+  mobileMenu.classList.toggle('open', open);
+  document.body.classList.toggle('menu-locked', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
+}
+menuBtn.addEventListener('click', () => {
+  setMenu(!mobileMenu.classList.contains('open'));
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => setMenu(false));
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) setMenu(false);
+});
 
 const canvas = document.getElementById('code-bg');
 const ctx = canvas.getContext('2d');
