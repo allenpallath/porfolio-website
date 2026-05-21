@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Allen Thomas Pallath — Senior Softtware Engineer</title>
+<title>Allen Thomas Pallath — Senior Software Engineer</title>
 <meta name="description" content="Allen Thomas Pallath — Senior Frontend Engineer crafting fast, scalable web experiences in Angular, React, and Next.js." />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c1ff48'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='20' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23c1ff48'/%3E%3Ctext x='90' y='128' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='112' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E">
@@ -128,17 +128,6 @@
     color: var(--lime);
     font-weight: 500;
     letter-spacing: -0.02em;
-  }
-  .topbar .clock {
-    color: var(--muted);
-  }
-  .topbar .clock .live-dot {
-    display: inline-block;
-    width: 6px; height: 6px;
-    background: var(--lime);
-    border-radius: 50%;
-    margin-right: 8px;
-    animation: blink 1.4s infinite;
   }
   @keyframes blink {
     0%, 100% { opacity: 1; } 50% { opacity: 0.2; }
@@ -287,20 +276,6 @@
     flex-direction: column;
     gap: 16px;
   }
-  .mobile-menu .mm-clock {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .mobile-menu .mm-clock .live-dot {
-    width: 6px; height: 6px;
-    background: var(--lime);
-    border-radius: 50%;
-    animation: blink 1.4s infinite;
-  }
   .mobile-menu .mm-socials {
     display: flex;
     flex-direction: column;
@@ -317,10 +292,6 @@
 
   body.menu-locked { overflow: hidden; }
 
-  @media (max-width: 700px) {
-    .topbar .nav-mini, .topbar .clock { display: none; }
-    .menu-btn { display: block; }
-  }
   @media (max-width: 480px) {
     .mobile-menu nav a { font-size: 36px; }
   }
@@ -1072,7 +1043,6 @@
       <a href="#projects">projects</a>
       <a href="#contact">contact</a>
     </div>
-    <div class="clock"><span class="live-dot"></span><span id="ist-clock">--:--:--</span> IST</div>
     <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1089,7 +1059,6 @@
     <a href="#contact"><span class="mm-num">05</span>contact</a>
   </nav>
   <div class="mm-footer">
-    <div class="mm-clock"><span class="live-dot"></span><span id="ist-clock-m">--:--:--</span> IST · Chennai</div>
     <div class="mm-socials">
       <a href="mailto:allenpallath@gmail.com">allenpallath@gmail.com →</a>
       <a href="https://github.com/allenpallath" target="_blank" rel="noopener">github.com/allenpallath →</a>
@@ -1108,10 +1077,9 @@
         <span class="file">~ allen.dev — zsh</span>
       </div>
       <div class="term-line"><span class="prompt">$</span><span class="out">whoami</span></div>
-      <div class="term-line"><span class="out">→ allen_thomas_pallath <span class="com">// senior frontend engineer</span></span></div>
+      <div class="term-line"><span class="out">→ allen_thomas_pallath <span class="com">// senior software engineer</span></span></div>
       <div class="term-line"><span class="prompt">$</span><span class="out">cat profile.<span class="key">json</span></span></div>
       <div class="term-line"><span class="out">{ <span class="key">"role"</span>: <span class="str">"senior swe"</span>, <span class="key">"yoe"</span>: <span class="str">6</span> }</div>
-      <div class="term-line"><span class="prompt">$</span><span class="out">echo "ready to ship<span class="term-cursor"></span></span></div>
     </div>
 
     <h1 class="split">
@@ -1127,14 +1095,12 @@
     </h1>
 
     <p class="hero-sub">
-      I'm <strong>Allen Thomas Pallath</strong> — a frontend engineer with <strong>6+ years</strong> shipping production SPAs, microfrontends, and SSR-powered experiences in <strong>Angular, React, and Next.js</strong>. Currently a Senior Software Engineer at Brandwatch.
+      I'm <strong>Allen Thomas Pallath</strong> a frontend engineer with <strong>6+ years</strong> shipping SPAs, microfrontends, and SSR-powered experiences in <strong>Angular, React, and Next.js</strong>. Currently a Senior Software Engineer at Brandwatch.
     </p>
 
     <div class="hero-meta">
       <span class="arrow">↳</span>
       <span>Based in Kochi, India · Remote</span>
-      <span>Open to senior &amp; lead roles</span>
-      <span>Collaborating with global teams</span>
     </div>
   </div>
 </header>
@@ -1171,15 +1137,15 @@
 <section id="about" class="work-section">
   <div class="wrap">
     <div class="section-tag">About</div>
-    <h2 class="heading-xl reveal">A frontend engineer who cares about<br><span class="ser">the small things</span> — and the big ones.</h2>
+    <h2 class="heading-xl reveal">A frontend engineer who cares about<br><span class="ser">the small things</span>, and the big ones.</h2>
 
     <div class="about-grid">
       <p class="about-lead reveal-left">
         I obsess over <em>render times</em>, <em>code review velocity</em>, and architectures that don't crumble at year three.
       </p>
       <div class="about-body reveal-right">
-        <p>I'm currently a Senior Software Engineer at <strong>Brandwatch</strong> (remote from Chennai), partnering with the product team on new features and collaborating with global teams on product enhancements.</p>
-        <p>Before this, I led a five-member frontend team at <strong>Techversant InfoTech</strong> working with Canadian clients, shipped SSR-enabled storefronts at <strong>Brandoptics</strong>, and cut my teeth on responsive UIs at <strong>Feathersoft</strong>.</p>
+        <p>I'm currently a Senior Software Engineer at <strong>Brandwatch</strong>, partnering with the product team on new features and collaborating with global teams on product enhancements.</p>
+        <p>Before, I led a frontend team at <strong>Techversant InfoTech</strong> working with Canadian clients, shipped SSR-enabled storefronts at <strong>Brandoptics</strong>, and cut my teeth on responsive UIs at <strong>Feathersoft</strong>.</p>
         <p>Recent wins: cutting UI render time by 50% through lazy loading and change detection tuning, lifting Lighthouse scores by 20%, and standardizing tooling that reduced code review time by 30%.</p>
         <p>B.Tech in Computer Science, Sahrdaya College of Engineering &amp; Technology — class of 2019.</p>
       </div>
@@ -1193,11 +1159,11 @@
     </div>
 
     <div class="factsheet stagger">
-      <div class="fact-row"><span class="k">Location</span><span class="v">Chennai, India · Remote</span><span class="arr">→</span></div>
-      <div class="fact-row"><span class="k">Status</span><span class="v" style="color: var(--lime)">Open to opportunities</span><span class="arr">→</span></div>
-      <div class="fact-row"><span class="k">Stack</span><span class="v">Angular · React · Next.js · TypeScript</span><span class="arr">→</span></div>
-      <div class="fact-row"><span class="k">Focus</span><span class="v">Microfrontends · SSR · Performance</span><span class="arr">→</span></div>
-      <div class="fact-row"><span class="k">Currently</span><span class="v">Senior Software Engineer @ Brandwatch</span><span class="arr">→</span></div>
+      <div class="fact-row"><span class="k">Location</span><span class="v">Kochi, India · Remote</span></div>
+      <div class="fact-row"><span class="k">Status</span><span class="v" style="color: var(--lime)">Open for collaborations</span></div>
+      <div class="fact-row"><span class="k">Stack</span><span class="v">Angular · React · Next.js · TypeScript</span></div>
+      <div class="fact-row"><span class="k">Focus</span><span class="v">Microfrontends · SSR · Performance</span></div>
+      <div class="fact-row"><span class="k">Currently</span><span class="v">Senior Software Engineer @ Brandwatch</span></div>
     </div>
   </div>
 </section>
@@ -1378,7 +1344,7 @@
         <div class="project-visual">
           <div class="browser-frame">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">telemed.app</span>
+            <span class="url">teledoc.app</span>
           </div>
           <div class="project-mock">
             <div class="mock-line acc-2"></div>
@@ -1389,7 +1355,7 @@
         </div>
         <div class="project-info">
           <div class="num">— Healthcare</div>
-          <h3>Tele<span class="ser">med</span></h3>
+          <h3>Tele<span class="ser">Doc</span></h3>
           <div class="tag-row"><span>Angular</span><span>Tailwind</span><span>RxJS</span><span>WebRTC</span></div>
           <p>Telehealth platform for booking virtual appointments and conducting secure video consultations between doctors and patients.</p>
         </div>
@@ -1399,7 +1365,7 @@
         <div class="project-visual">
           <div class="browser-frame">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">gs1ca.service-request</span>
+            <span class="url">service-request.app</span>
           </div>
           <div class="project-mock">
             <div class="mock-line acc"></div>
@@ -1410,10 +1376,10 @@
           </div>
         </div>
         <div class="project-info">
-          <div class="num">— Enterprise · In progress</div>
+          <div class="num">— Enterprise</div>
           <h3>Service <span class="ser">Request</span></h3>
           <div class="tag-row"><span>Angular v20</span><span>TypeScript</span><span>Tailwind</span><span>RxJS</span></div>
-          <p>SPA in active development for <strong>GS1 Canada</strong>, letting users request and manage service submissions with a workflow that scales across business units.</p>
+          <p><strong>Enterprise web app </strong>for, letting users request and manage service submissions with a workflow that scales across business units.</p>
         </div>
       </div>
 
@@ -1440,7 +1406,7 @@
 <footer>
   <div class="wrap">
     <div>© 2026 — Allen Thomas Pallath</div>
-    <div>Built with care · No frameworks · Just craft</div>
+    <div>Built with care</div>
   </div>
 </footer>
 
@@ -1465,22 +1431,6 @@ document.querySelectorAll('a, button, .skill-row, .project-visual, .fact-row, .e
   el.addEventListener('mouseenter', () => ring.classList.add('hover'));
   el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
 });
-
-function updateClock() {
-  const now = new Date();
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-  const ist = new Date(utc + 5.5 * 3600000);
-  const h = String(ist.getHours()).padStart(2, '0');
-  const m = String(ist.getMinutes()).padStart(2, '0');
-  const s = String(ist.getSeconds()).padStart(2, '0');
-  const txt = `${h}:${m}:${s}`;
-  const el1 = document.getElementById('ist-clock');
-  const el2 = document.getElementById('ist-clock-m');
-  if (el1) el1.textContent = txt;
-  if (el2) el2.textContent = txt;
-}
-updateClock();
-setInterval(updateClock, 1000);
 
 // Mobile menu toggle
 const menuBtn = document.getElementById('menu-btn');
