@@ -48,7 +48,7 @@
     position: fixed;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    opacity: 0.04;
+    opacity: 0.4;
     pointer-events: none;
     z-index: 1;
     mix-blend-mode: overlay;
@@ -464,7 +464,7 @@
   }
 
   section.work-section {
-    padding: 130px 0;
+    padding: 80px 0;
     position: relative;
   }
   .section-tag {
@@ -1016,6 +1016,12 @@
     padding-top: 50px;
     border-top: 1px solid var(--line);
   }
+
+  .stat-cell{
+    display: grid;
+    justify-content: center;
+  }
+
   .stat-cell .label {
     font-family: var(--mono);
     font-size: 11px;
@@ -1149,9 +1155,7 @@
       </p>
       <div class="about-body reveal-right">
         <p>I'm currently a Senior Software Engineer at <strong>Brandwatch</strong>, partnering with the product team on new features and collaborating with global teams on product enhancements.</p>
-        <p>Before, I led a frontend team at <strong>Techversant InfoTech</strong> working with Canadian clients, shipped SSR-enabled storefronts at <strong>Brandoptics</strong>, and cut my teeth on responsive UIs at <strong>Feathersoft</strong>.</p>
         <p>Recent wins: cutting UI render time by 50% through lazy loading and change detection tuning, lifting Lighthouse scores by 20%, and standardizing tooling that reduced code review time by 30%.</p>
-        <p>B.Tech in Computer Science, Sahrdaya College of Engineering &amp; Technology — class of 2019.</p>
       </div>
     </div>
 
@@ -1468,7 +1472,7 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
-const symbols = ['{', '}', '<', '/>', '()', '=>', '[]', ';', '&&', '||', '++', '...', '#', '$', '*', '?', '!', '::', '/*'];
+const symbols = ['{', '}', '<', '/>', '()', '=>', '[]','=', ';', '&&', '||', '++', '...', '#', '$', '*', '?', '!', '::', '/*',  '=='];
 const codeBits = ['const', 'let', 'async', 'await', 'function', 'export', 'import', 'return', 'if', 'else', 'class', 'new', 'this', 'null', 'true', 'false'];
 
 const particles = [];
