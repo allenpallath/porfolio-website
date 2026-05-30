@@ -30,7 +30,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
 
   body {
     font-family: var(--sans);
@@ -66,7 +66,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(12, 12, 13, 0.55) 0%, rgba(12, 12, 13, 0.75) 100%);
+    background: radial-gradient(ellipse at center, rgba(12, 12, 13, 0.35) 0%, rgba(12, 12, 13, 0.55) 100%);
     pointer-events: none;
     z-index: 1;
   }
@@ -110,7 +110,7 @@
   .topbar {
     position: fixed;
     top: 0; left: 0; right: 0;
-    z-index: 100;
+    z-index: 106;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     background: rgba(12, 12, 13, 0.7);
@@ -838,7 +838,7 @@
 
   /* CONTACT */
   .contact {
-    padding: 160px 0 100px;
+    padding: 80px 0;
     text-align: center;
     position: relative;
   }
@@ -1033,7 +1033,7 @@
   @media (max-width: 700px) {
     .stats-strip { grid-template-columns: repeat(2, 1fr); }
     .about-grid { grid-template-columns: 1fr; gap: 32px; }
-    section.work-section { padding: 80px 0; }
+    section.work-section, .contact { padding: 80px 0; }
   }
 </style>
 </head>
@@ -1155,7 +1155,6 @@
       </p>
       <div class="about-body reveal-right">
         <p>I'm currently a Senior Software Engineer at <strong>Brandwatch</strong>, partnering with the product team on new features and collaborating with global teams on product enhancements.</p>
-        <p>Recent wins: cutting UI render time by 50% through lazy loading and change detection tuning, lifting Lighthouse scores by 20%, and standardizing tooling that reduced code review time by 30%.</p>
       </div>
     </div>
 
@@ -1486,7 +1485,7 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
     vy: (Math.random() - 0.5) * 0.25 * devicePixelRatio,
     text: isWord ? codeBits[Math.floor(Math.random() * codeBits.length)] : symbols[Math.floor(Math.random() * symbols.length)],
     size: (isWord ? 11 : 14) * devicePixelRatio,
-    opacity: Math.random() * 0.18 + 0.04,
+    opacity: Math.random() * 0.25 + 0.06,
     isWord,
     pulse: Math.random() * Math.PI * 2,
   });
@@ -1498,7 +1497,7 @@ window.addEventListener('scroll', () => { scrollY = window.scrollY; });
 function draw() {
   ctx.clearRect(0, 0, W, H);
 
-  ctx.strokeStyle = 'rgba(244, 244, 245, 0.025)';
+  ctx.strokeStyle = 'rgba(244, 244, 245, 0.04)';
   ctx.lineWidth = 1;
   const grid = 60 * devicePixelRatio;
   const offset = (scrollY * 0.3 * devicePixelRatio) % grid;
@@ -1514,7 +1513,7 @@ function draw() {
       const a = particles[i], b = particles[j];
       const d = Math.hypot(a.x - b.x, a.y - b.y);
       if (d < 180 * devicePixelRatio) {
-        ctx.strokeStyle = `rgba(193, 255, 72, ${(1 - d / (180 * devicePixelRatio)) * 0.06})`;
+        ctx.strokeStyle = `rgba(193, 255, 72, ${(1 - d / (180 * devicePixelRatio)) * 0.10})`;
         ctx.lineWidth = 0.5 * devicePixelRatio;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
