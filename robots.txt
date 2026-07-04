@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: update domain once finalised
+Sitemap: https://allenpallath.com/sitemap.xml
