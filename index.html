@@ -1,474 +1,790 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Google Analytics (GA4) — TODO: replace G-XXXXXXXXXX with your Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+    <!-- Google Analytics (GA4) — TODO: replace G-XXXXXXXXXX with your Measurement ID -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
 
-<!-- Primary SEO -->
-<title>Allen Thomas Pallath — Senior Software Engineer</title>
-<meta name="description" content="Allen Thomas Pallath — Senior Frontend Engineer with 6+ years building fast, scalable web apps in Angular, React & Next.js. Microfrontends, SSR & performance." />
-<meta name="author" content="Allen Thomas Pallath" />
-<meta name="keywords" content="Allen Thomas Pallath, Senior Software Engineer, Frontend Engineer, Angular, React, Next.js, TypeScript, microfrontends, SSR, web performance, Kochi, Brandwatch" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
+    <!-- Primary SEO -->
+    <title>Allen Thomas Pallath — Senior Software Engineer</title>
+    <meta
+      name="description"
+      content="Allen Thomas Pallath — Senior Frontend Engineer with 6+ years building fast, scalable web apps in Angular, React & Next.js. Microfrontends, SSR & performance."
+    />
+    <meta name="author" content="Allen Thomas Pallath" />
+    <meta
+      name="keywords"
+      content="Allen Thomas Pallath, Senior Software Engineer, Frontend Engineer, Angular, React, Next.js, TypeScript, microfrontends, SSR, web performance, Kochi, Brandwatch"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
-<!-- TODO: replace https://allenpallath.com with your final domain (canonical + og:url + JSON-LD) -->
-<link rel="canonical" href="https://allenpallath.com/" />
+    <!-- TODO: replace https://allenpallath.com with your final domain (canonical + og:url + JSON-LD) -->
+    <link rel="canonical" href="https://allenpallath.com/" />
 
-<!-- Open Graph (Facebook, LinkedIn, Slack…) -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Allen Thomas Pallath" />
-<meta property="og:title" content="Allen Thomas Pallath — Senior Software Engineer" />
-<meta property="og:description" content="Senior Frontend Engineer with 6+ years building fast, scalable web apps in Angular, React, and Next.js." />
-<meta property="og:url" content="https://allenpallath.com/" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:image" content="https://allenpallath.com/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Allen Thomas Pallath — Senior Software Engineer" />
+    <!-- Open Graph (Facebook, LinkedIn, Slack…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Allen Thomas Pallath" />
+    <meta
+      property="og:title"
+      content="Allen Thomas Pallath — Senior Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Senior Frontend Engineer with 6+ years building fast, scalable web apps in Angular, React, and Next.js."
+    />
+    <meta property="og:url" content="https://allenpallath.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://allenpallath.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Allen Thomas Pallath — Senior Software Engineer"
+    />
 
-<!-- Twitter / X card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Allen Thomas Pallath — Senior Software Engineer" />
-<meta name="twitter:description" content="Senior Frontend Engineer with 6+ years building fast, scalable web apps in Angular, React, and Next.js." />
-<meta name="twitter:image" content="https://allenpallath.com/og-image.png" />
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Allen Thomas Pallath — Senior Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Senior Frontend Engineer with 6+ years building fast, scalable web apps in Angular, React, and Next.js."
+    />
+    <meta
+      name="twitter:image"
+      content="https://allenpallath.com/og-image.png"
+    />
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c1ff48'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='20' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23c1ff48'/%3E%3Ctext x='90' y='128' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='112' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E">
-<meta name="theme-color" content="#c1ff48">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c1ff48'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='20' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23c1ff48'/%3E%3Ctext x='90' y='128' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='112' fill='%230c0c0d'%3EA%3C/text%3E%3C/svg%3E"
+    />
+    <meta name="theme-color" content="#c1ff48" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
-<!-- Structured data: Person (rich results) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Allen Thomas Pallath",
-  "url": "https://allenpallath.com/",
-  "jobTitle": "Senior Software Engineer",
-  "email": "mailto:allenpallath@gmail.com",
-  "telephone": "+91-9946279941",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kochi",
-    "addressRegion": "Kerala",
-    "addressCountry": "IN"
-  },
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Brandwatch"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Sahrdaya College of Engineering & Technology"
-  },
-  "knowsAbout": ["Angular", "React", "Next.js", "TypeScript", "RxJS", "NgRx", "Microfrontends", "Server-Side Rendering", "Web Performance"],
-  "sameAs": [
-    "https://github.com/allenpallath",
-    "https://linkedin.com/in/allenpallath"
-  ]
-}
-</script>
-</head>
-<body class="loading">
-
-<div class="loader" id="loader" role="status" aria-label="Loading">
-  <div class="loader-inner">
-    <div class="loader-badge">A</div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
-    <div class="loader-status"><span class="loader-pct">0</span>% — initializing</div>
-  </div>
-</div>
-
-<canvas id="code-bg" aria-hidden="true"></canvas>
-<div class="cursor-dot" aria-hidden="true"></div>
-<div class="cursor-ring" aria-hidden="true"></div>
-
-<div class="topbar">
-  <div class="wrap">
-    <a class="logo" href="#" aria-label="Allen Thomas Pallath — home">~/allenpallath</a>
-    <nav class="nav-mini" aria-label="Primary">
-      <a href="#about">about</a>
-      <a href="#skills">skills</a>
-      <a href="#experience">work</a>
-      <a href="#projects">projects</a>
-      <a href="#contact">contact</a>
-    </nav>
-    <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</div>
-
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <div class="mm-eyebrow">— Navigation</div>
-  <nav>
-    <a href="#about"><span class="mm-num">01</span>about</a>
-    <a href="#skills"><span class="mm-num">02</span>the <span class="ser">stack</span></a>
-    <a href="#experience"><span class="mm-num">03</span>experience</a>
-    <a href="#projects"><span class="mm-num">04</span>selected <span class="ser">work</span></a>
-    <a href="#contact"><span class="mm-num">05</span>contact</a>
-  </nav>
-  <div class="mm-footer">
-    <div class="mm-socials">
-      <a href="mailto:allenpallath@gmail.com">allenpallath@gmail.com →</a>
-      <a href="https://github.com/allenpallath" target="_blank" rel="noopener">github.com/allenpallath →</a>
-      <a href="https://linkedin.com/in/allenpallath" target="_blank" rel="noopener">linkedin.com/in/allenpallath →</a>
-    </div>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="terminal">
-      <div class="terminal-bar">
-        <span class="dot r"></span>
-        <span class="dot y"></span>
-        <span class="dot g"></span>
-        <span class="file">~ allen.dev — zsh</span>
-      </div>
-      <div class="term-line"><span class="prompt">$</span><span class="out">whoami</span></div>
-      <div class="term-line"><span class="out">→ allen_thomas_pallath <span class="com">// senior software engineer</span></span></div>
-      <div class="term-line"><span class="prompt">$</span><span class="out">cat profile.<span class="key">json</span></span></div>
-      <div class="term-line"><span class="out">{ <span class="key">"role"</span>: <span class="str">"senior swe"</span>, <span class="key">"yoe"</span>: <span class="str">6</span> }</span></div>
-    </div>
-
-    <h1 class="split">
-      <span class="word"><span style="--d: 0s">Building</span></span>
-      <span class="word"><span style="--d: .05s">the</span></span>
-      <span class="word"><span style="--d: .1s"><i class="ser">web</i>,</span></span><br>
-      <span class="word"><span style="--d: .15s">one</span></span>
-      <span class="word"><span style="--d: .2s">scalable</span></span><br>
-      <span class="word"><span style="--d: .25s; color: var(--lime)">component</span></span>
-      <span class="word"><span style="--d: .3s">at</span></span>
-      <span class="word"><span style="--d: .35s">a</span></span>
-      <span class="word"><span style="--d: .4s">time.</span></span>
-    </h1>
-
-    <p class="hero-sub">
-      I'm <strong>Allen Thomas Pallath</strong> a frontend engineer with <strong>6+ years</strong> shipping SPAs, microfrontends, and SSR-powered experiences in <strong>Angular, React, and Next.js</strong>. Currently a Senior Software Engineer at Brandwatch.
-    </p>
-
-    <div class="hero-meta">
-      <span class="arrow">↳</span>
-      <span>Based in Kochi, India</span>
-    </div>
-  </div>
-</header>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mq">
-    <span class="marquee-item">Angular</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">React</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Next.js</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">TypeScript</span><span class="marquee-dot"></span>
-    <span class="marquee-item">RxJS</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">NgRx</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Tailwind</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">Microfrontends</span><span class="marquee-dot"></span>
-    <span class="marquee-item">SSR</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">PWA</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Module Federation</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">Azure</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Angular</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">React</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Next.js</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">TypeScript</span><span class="marquee-dot"></span>
-    <span class="marquee-item">RxJS</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">NgRx</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Tailwind</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">Microfrontends</span><span class="marquee-dot"></span>
-    <span class="marquee-item">SSR</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">PWA</span><span class="marquee-dot"></span>
-    <span class="marquee-item">Module Federation</span><span class="marquee-dot"></span>
-    <span class="marquee-item alt">Azure</span><span class="marquee-dot"></span>
-  </div>
-</div>
-
-<section id="about" class="work-section">
-  <div class="wrap">
-    <div class="section-tag">About</div>
-    <h2 class="heading-xl reveal">A frontend engineer who cares about<br><span class="ser">the small things</span>, and the big ones.</h2>
-
-    <div class="about-grid">
-      <p class="about-lead reveal-left">
-        I obsess over <em>render times</em>, <em>code review velocity</em>, and architectures that don't crumble at year three.
-      </p>
-      <div class="about-body reveal-right">
-        <p>I'm currently a Senior Software Engineer at <strong>Brandwatch</strong>, partnering with the product team on new features and collaborating with global teams on product enhancements.</p>
-      </div>
-    </div>
-
-    <div class="stats-strip stagger">
-      <div class="stat-cell"><div class="counter-num" data-count="6">0</div><div class="label">Years building</div></div>
-      <div class="stat-cell"><div class="counter-num" data-count="15">0</div><div class="label">Projects shipped</div></div>
-      <div class="stat-cell"><div class="counter-num" data-count="50">0</div><div class="label">% Performance gains</div></div>
-      <div class="stat-cell"><div class="counter-num" data-count="30">0</div><div class="label">% Faster reviews</div></div>
-    </div>
-
-    <div class="factsheet stagger">
-      <div class="fact-row"><span class="k">Location</span><span class="v">Kochi, India </span></div>
-      <div class="fact-row"><span class="k">Status</span><span class="v" style="color: var(--lime)">Open for collaborations</span></div>
-      <div class="fact-row"><span class="k">Stack</span><span class="v">Angular · React · Next.js · TypeScript</span></div>
-      <div class="fact-row"><span class="k">Focus</span><span class="v">Microfrontends · SSR · Performance</span></div>
-      <div class="fact-row"><span class="k">Currently</span><span class="v">Senior Software Engineer @ Brandwatch</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="work-section">
-  <div class="wrap">
-    <div class="section-tag">The Stack</div>
-    <h2 class="heading-xl reveal">Tools that <span class="ser">earn their keep</span>.</h2>
-
-    <div class="skills-list stagger">
-      <div class="skill-row" style="--w: 96%">
-        <span class="num">/01</span>
-        <span class="name">Angular <span class="ser">v8–20</span></span>
-        <div class="tags"><span>SPA</span><span>SSR</span><span>Microfrontends</span><span>Universal</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 88%">
-        <span class="num">/02</span>
-        <span class="name">React + <span class="ser">Next.js</span></span>
-        <div class="tags"><span>Hooks</span><span>SSR/SSG</span><span>App Router</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 92%">
-        <span class="num">/03</span>
-        <span class="name">TypeScript</span>
-        <div class="tags"><span>Generics</span><span>Type-safe APIs</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 90%">
-        <span class="num">/04</span>
-        <span class="name">RxJS &amp; <span class="ser">NgRx</span></span>
-        <div class="tags"><span>Reactive streams</span><span>State machines</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 85%">
-        <span class="num">/05</span>
-        <span class="name">Tailwind &amp; UI Systems</span>
-        <div class="tags"><span>Bootstrap</span><span>PrimeNG</span><span>Design tokens</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 80%">
-        <span class="num">/06</span>
-        <span class="name"><span class="ser">Performance</span> &amp; SEO</span>
-        <div class="tags"><span>Lighthouse</span><span>Core Web Vitals</span><span>Lazy loading</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 82%">
-        <span class="num">/07</span>
-        <span class="name">CI/CD &amp; Tooling</span>
-        <div class="tags"><span>Azure</span><span>ESLint</span><span>Prettier</span><span>Git</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-      <div class="skill-row" style="--w: 78%">
-        <span class="num">/08</span>
-        <span class="name"><span class="ser">Leading</span> teams</span>
-        <div class="tags"><span>Code reviews</span><span>Architecture</span><span>Mentorship</span></div>
-        <div class="bar-wrap"><div class="bar"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience" class="work-section">
-  <div class="wrap">
-    <div class="section-tag">Experience</div>
-    <h2 class="heading-xl reveal">Six years of <span class="ser">shipping</span>.</h2>
-
-    <div class="exp-list" style="margin-top: 40px;">
-      <div class="exp-item reveal-left">
-        <div class="exp-period">Mar 2026 — <span class="now">Now ●</span></div>
-        <div>
-          <div class="exp-role">Senior <span class="ser">Software</span> Engineer</div>
-          <div class="exp-company">Brandwatch · Chennai (Remote)</div>
-          <ul class="exp-points">
-            <li>Work with the product team on creating and shipping new features</li>
-            <li>Participate in solution discussions for product enhancements</li>
-            <li>Collaborate with global teams across distributed time zones</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal-right">
-        <div class="exp-period">Jan 2025 — Feb 2026</div>
-        <div>
-          <div class="exp-role">Team Lead <span class="ser">+</span> Senior SWE</div>
-          <div class="exp-company">Techversant InfoTech · Kochi</div>
-          <ul class="exp-points">
-            <li>Led a five-member frontend team driving code and performance reviews</li>
-            <li>Shipped microfrontend &amp; monolithic SPAs for enterprise Canadian clients</li>
-            <li>Cut UI render time by 50% via lazy loading, deferred render, change detection</li>
-            <li>Unified ESLint/Prettier setup reduced code review time by 30%</li>
-            <li>Defined scalable UI architecture and design standards across teams</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal-left">
-        <div class="exp-period">Dec 2022 — Jan 2025</div>
-        <div>
-          <div class="exp-role">Senior <span class="ser">Software</span> Engineer</div>
-          <div class="exp-company">Brandoptics · Kochi</div>
-          <ul class="exp-points">
-            <li>Built SSR-enabled SPAs that lifted SEO and first-paint metrics</li>
-            <li>Delivered reusable UI libraries and modular SPAs with pagination + filtering</li>
-            <li>Increased Lighthouse performance by 20%, improving UX and client satisfaction</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal-right">
-        <div class="exp-period">May 2020 — Dec 2022</div>
-        <div>
-          <div class="exp-role"><span class="ser">Software</span> Engineer</div>
-          <div class="exp-company">Feathersoft Info Solutions · Kochi</div>
-          <ul class="exp-points">
-            <li>Built dynamic UIs integrated with REST APIs and responsive layouts</li>
-            <li>Maintained quality through Agile collaboration and peer code reviews</li>
-            <li>Contributed to four successful product releases on time</li>
-          </ul>
+    <!-- Structured data: Person (rich results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Allen Thomas Pallath",
+        "url": "https://allenpallath.com/",
+        "jobTitle": "Senior Software Engineer",
+        "email": "mailto:allenpallath@gmail.com",
+        "telephone": "+91-9946279941",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kochi",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Brandwatch"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Sahrdaya College of Engineering & Technology"
+        },
+        "knowsAbout": [
+          "Angular",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "RxJS",
+          "NgRx",
+          "Microfrontends",
+          "Server-Side Rendering",
+          "Web Performance"
+        ],
+        "sameAs": [
+          "https://github.com/allenpallath",
+          "https://linkedin.com/in/allenpallath"
+        ]
+      }
+    </script>
+  </head>
+  <body class="loading">
+    <div class="loader" id="loader" role="status" aria-label="Loading">
+      <div class="loader-inner">
+        <div class="loader-badge">A</div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        <div class="loader-status">
+          <span class="loader-pct">0</span>% — initializing
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="projects" class="work-section">
-  <div class="wrap">
-    <div class="section-tag">Selected Work</div>
-    <h2 class="heading-xl reveal">Things I've <span class="ser">put into the world</span>.</h2>
+    <canvas id="code-bg" aria-hidden="true"></canvas>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
-    <div class="projects-stack">
+    <div class="topbar">
+      <div class="wrap">
+        <a class="logo" href="#" aria-label="Allen Thomas Pallath — home"
+          >~/allenpallath</a
+        >
+        <nav class="nav-mini" aria-label="Primary">
+          <a href="#about">about</a>
+          <a href="#skills">skills</a>
+          <a href="#experience">work</a>
+          <a href="#projects">projects</a>
+          <a href="#contact">contact</a>
+        </nav>
+        <button
+          class="menu-btn"
+          id="menu-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
 
-      <div class="project reveal-scale">
-        <div class="project-visual">
-          <div class="browser-frame">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">pixelbooksapp.com</span>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mm-eyebrow">— Navigation</div>
+      <nav>
+        <a href="#about"><span class="mm-num">01</span>about</a>
+        <a href="#skills"
+          ><span class="mm-num">02</span>the <span class="ser">stack</span></a
+        >
+        <a href="#experience"><span class="mm-num">03</span>experience</a>
+        <a href="#projects"
+          ><span class="mm-num">04</span>selected
+          <span class="ser">work</span></a
+        >
+        <a href="#contact"><span class="mm-num">05</span>contact</a>
+      </nav>
+      <div class="mm-footer">
+        <div class="mm-socials">
+          <a href="mailto:allenpallath@gmail.com">allenpallath@gmail.com →</a>
+          <a
+            href="https://github.com/allenpallath"
+            target="_blank"
+            rel="noopener"
+            >github.com/allenpallath →</a
+          >
+          <a
+            href="https://linkedin.com/in/allenpallath"
+            target="_blank"
+            rel="noopener"
+            >linkedin.com/in/allenpallath →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="wrap">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot r"></span>
+            <span class="dot y"></span>
+            <span class="dot g"></span>
+            <span class="file">~ allen.dev — zsh</span>
           </div>
-          <div class="project-mock">
-            <div class="mock-line acc"></div>
-            <div class="mock-line" style="width: 70%"></div>
-            <div class="mock-line" style="width: 50%"></div>
-            <div class="mock-grid"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          <div class="term-line">
+            <span class="prompt">$</span><span class="out">whoami</span>
+          </div>
+          <div class="term-line">
+            <span class="out"
+              >→ allen_thomas_pallath
+              <span class="com">// senior software engineer</span></span
+            >
+          </div>
+          <div class="term-line">
+            <span class="prompt">$</span
+            ><span class="out">cat profile.<span class="key">json</span></span>
+          </div>
+          <div class="term-line">
+            <span class="out"
+              >{ <span class="key">"role"</span>:
+              <span class="str">"senior swe"</span>,
+              <span class="key">"yoe"</span>: <span class="str">6</span> }</span
+            >
           </div>
         </div>
-        <div class="project-info">
-          <div class="num">— E-commerce</div>
-          <h3>Pixel <span class="ser">Books</span></h3>
-          <div class="tag-row"><span>Angular v17</span><span>SSR</span><span>Tailwind</span><span>Firebase</span><span>RxJS</span></div>
-          <p>SSR-powered eBook store and digital library — buy, borrow, and read books online with secure transactions and snappy first paint.</p>
-          <a href="https://www.pixelbooksapp.com" target="_blank" rel="noopener" class="live-link">Visit live site →</a>
+
+        <h1 class="split">
+          <span class="word"><span style="--d: 0s">Building</span></span>
+          <span class="word"><span style="--d: 0.05s">the</span></span>
+          <span class="word"
+            ><span style="--d: 0.1s"><i class="ser">web</i>,</span></span
+          ><br />
+          <div class="word-wrap">
+            <span class="word"><span style="--d: 0.15s">one</span></span>
+            <span class="word"><span style="--d: 0.2s">scalable</span></span
+            ><br />
+          </div>
+          <span class="word"
+            ><span style="--d: 0.25s; color: var(--lime)">component</span></span
+          >
+          <span class="word"><span style="--d: 0.3s">at</span></span>
+          <span class="word"><span style="--d: 0.35s">a</span></span>
+          <span class="word"><span style="--d: 0.4s">time.</span></span>
+        </h1>
+
+        <p class="hero-sub">
+          I'm <strong>Allen Thomas Pallath</strong> a frontend engineer with
+          <strong>6+ years</strong> shipping SPAs, microfrontends, and
+          SSR-powered experiences in
+          <strong>Angular, React, and Next.js</strong>. Currently a Senior
+          Software Engineer at Brandwatch.
+        </p>
+
+        <div class="hero-meta">
+          <span class="arrow">↳</span>
+          <span>Based in Kochi, India</span>
         </div>
       </div>
+    </header>
 
-      <div class="project reveal-scale">
-        <div class="project-visual">
-          <div class="browser-frame">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">knottfar.com</span>
-          </div>
-          <div class="project-mock">
-            <div class="mock-line acc"></div>
-            <div class="mock-line" style="width: 60%"></div>
-            <div class="mock-grid"><div></div><div></div><div></div><div></div><div></div><div></div></div>
-            <div class="mock-line" style="width: 35%; margin-top: 8px"></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="num">— PWA Events</div>
-          <h3><span class="ser">Knott</span>far</h3>
-          <div class="tag-row"><span>Angular</span><span>Bootstrap</span><span>PWA</span><span>REST APIs</span></div>
-          <p>Progressive web app for weddings, receptions, and parties — vendor booking with direct client–provider chat, installable from the browser.</p>
-          <a href="https://www.knottfar.com" target="_blank" rel="noopener" class="live-link">Visit live site →</a>
-        </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="mq">
+        <span class="marquee-item">Angular</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">React</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Next.js</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">TypeScript</span
+        ><span class="marquee-dot"></span> <span class="marquee-item">RxJS</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">NgRx</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Tailwind</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">Microfrontends</span
+        ><span class="marquee-dot"></span> <span class="marquee-item">SSR</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">PWA</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Module Federation</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">Azure</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Angular</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">React</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Next.js</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">TypeScript</span
+        ><span class="marquee-dot"></span> <span class="marquee-item">RxJS</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">NgRx</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Tailwind</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">Microfrontends</span
+        ><span class="marquee-dot"></span> <span class="marquee-item">SSR</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">PWA</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item">Module Federation</span
+        ><span class="marquee-dot"></span>
+        <span class="marquee-item alt">Azure</span
+        ><span class="marquee-dot"></span>
       </div>
-
-      <div class="project reveal-scale">
-        <div class="project-visual">
-          <div class="browser-frame">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">teledoc.app</span>
-          </div>
-          <div class="project-mock">
-            <div class="mock-line acc-2"></div>
-            <div class="mock-line" style="width: 55%"></div>
-            <div class="mock-grid"><div></div><div></div><div></div></div>
-            <div class="mock-line" style="width: 75%; margin-top: 8px"></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="num">— Healthcare</div>
-          <h3>Tele<span class="ser">Doc</span></h3>
-          <div class="tag-row"><span>Angular</span><span>Tailwind</span><span>RxJS</span><span>WebRTC</span></div>
-          <p>Telehealth platform for booking virtual appointments and conducting secure video consultations between doctors and patients.</p>
-        </div>
-      </div>
-
-      <div class="project reveal-scale">
-        <div class="project-visual">
-          <div class="browser-frame">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">service-request.app</span>
-          </div>
-          <div class="project-mock">
-            <div class="mock-line acc"></div>
-            <div class="mock-line" style="width: 70%"></div>
-            <div class="mock-line" style="width: 50%"></div>
-            <div class="mock-line" style="width: 80%"></div>
-            <div class="mock-grid"><div></div><div></div><div></div><div></div><div></div><div></div></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="num">— Enterprise</div>
-          <h3>Service <span class="ser">Request</span></h3>
-          <div class="tag-row"><span>Angular v20</span><span>TypeScript</span><span>Tailwind</span><span>RxJS</span></div>
-          <p><strong>Enterprise web app</strong> that lets users request and manage service submissions with a workflow that scales across business units.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="contact-eyebrow">— Available for collaboration</div>
-    <h2 class="reveal">Got a frontend<br>problem worth <span class="ser">solving</span>?</h2>
-    <a href="mailto:allenpallath@gmail.com" class="email-btn">
-      allenpallath@gmail.com
-      <span class="arr">→</span>
-    </a>
-    <div class="contact-secondary">
-      <a href="https://github.com/allenpallath" target="_blank" rel="noopener">github.com/allenpallath</a>
-      <a href="https://linkedin.com/in/allenpallath" target="_blank" rel="noopener">linkedin.com/in/allenpallath</a>
-      <a href="tel:+919946279941">+91 9946279941</a>
-    </div>
-  </div>
-</section>
+    <section id="about" class="work-section">
+      <div class="wrap">
+        <div class="section-tag">About</div>
+        <h2 class="heading-xl reveal">
+          A frontend engineer who cares about<br /><span class="ser"
+            >the small things</span
+          >, and the big ones.
+        </h2>
 
-<footer>
-  <div class="wrap">
-    <div>© 2026 — Allen Thomas Pallath</div>
-    <div>Built with care</div>
-  </div>
-</footer>
+        <div class="about-grid">
+          <p class="about-lead reveal-left">
+            I obsess over <em>render times</em>, <em>code review velocity</em>,
+            and architectures that don't crumble at year three.
+          </p>
+          <div class="about-body reveal-right">
+            <p>
+              I'm currently a Senior Software Engineer at
+              <strong>Brandwatch</strong>, partnering with the product team on
+              new features and collaborating with global teams on product
+              enhancements.
+            </p>
+          </div>
+        </div>
 
-<script src="script.js"></script>
-</body>
+        <div class="stats-strip stagger">
+          <div class="stat-cell">
+            <div class="counter-num" data-count="6">0</div>
+            <div class="label">Years building</div>
+          </div>
+          <div class="stat-cell">
+            <div class="counter-num" data-count="15">0</div>
+            <div class="label">Projects shipped</div>
+          </div>
+          <div class="stat-cell">
+            <div class="counter-num" data-count="50">0</div>
+            <div class="label">% Performance gains</div>
+          </div>
+          <div class="stat-cell">
+            <div class="counter-num" data-count="30">0</div>
+            <div class="label">% Faster reviews</div>
+          </div>
+        </div>
+
+        <div class="factsheet stagger">
+          <div class="fact-row">
+            <span class="k">Location</span><span class="v">Kochi, India </span>
+          </div>
+          <div class="fact-row">
+            <span class="k">Status</span
+            ><span class="v" style="color: var(--lime)"
+              >Open for collaborations</span
+            >
+          </div>
+          <div class="fact-row">
+            <span class="k">Stack</span
+            ><span class="v">Angular · React · Next.js · TypeScript</span>
+          </div>
+          <div class="fact-row">
+            <span class="k">Focus</span
+            ><span class="v">Microfrontends · SSR · Performance</span>
+          </div>
+          <div class="fact-row">
+            <span class="k">Currently</span
+            ><span class="v">Senior Software Engineer @ Brandwatch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="work-section">
+      <div class="wrap">
+        <div class="section-tag">The Stack</div>
+        <h2 class="heading-xl reveal">
+          Tools that <span class="ser">earn their keep</span>.
+        </h2>
+
+        <div class="skills-list stagger">
+          <div class="skill-row" style="--w: 96%">
+            <span class="num">/01</span>
+            <span class="name">Angular <span class="ser">v8–20</span></span>
+            <div class="tags">
+              <span>SPA</span><span>SSR</span><span>Microfrontends</span
+              ><span>Universal</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 88%">
+            <span class="num">/02</span>
+            <span class="name">React + <span class="ser">Next.js</span></span>
+            <div class="tags">
+              <span>Hooks</span><span>SSR/SSG</span><span>App Router</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 92%">
+            <span class="num">/03</span>
+            <span class="name">TypeScript</span>
+            <div class="tags">
+              <span>Generics</span><span>Type-safe APIs</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 90%">
+            <span class="num">/04</span>
+            <span class="name">RxJS &amp; <span class="ser">NgRx</span></span>
+            <div class="tags">
+              <span>Reactive streams</span><span>State machines</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 85%">
+            <span class="num">/05</span>
+            <span class="name">Tailwind &amp; UI Systems</span>
+            <div class="tags">
+              <span>Bootstrap</span><span>PrimeNG</span
+              ><span>Design tokens</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 80%">
+            <span class="num">/06</span>
+            <span class="name"
+              ><span class="ser">Performance</span> &amp; SEO</span
+            >
+            <div class="tags">
+              <span>Lighthouse</span><span>Core Web Vitals</span
+              ><span>Lazy loading</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 82%">
+            <span class="num">/07</span>
+            <span class="name">CI/CD &amp; Tooling</span>
+            <div class="tags">
+              <span>Azure</span><span>ESLint</span><span>Prettier</span
+              ><span>Git</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+          <div class="skill-row" style="--w: 78%">
+            <span class="num">/08</span>
+            <span class="name"><span class="ser">Leading</span> teams</span>
+            <div class="tags">
+              <span>Code reviews</span><span>Architecture</span
+              ><span>Mentorship</span>
+            </div>
+            <div class="bar-wrap"><div class="bar"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="work-section">
+      <div class="wrap">
+        <div class="section-tag">Experience</div>
+        <h2 class="heading-xl reveal">
+          Six years of <span class="ser">shipping</span>.
+        </h2>
+
+        <div class="exp-list" style="margin-top: 40px">
+          <div class="exp-item reveal-left">
+            <div class="exp-period">
+              Mar 2026 — <span class="now">Now ●</span>
+            </div>
+            <div>
+              <div class="exp-role">
+                Senior <span class="ser">Software</span> Engineer
+              </div>
+              <div class="exp-company">Brandwatch · Chennai (Remote)</div>
+              <ul class="exp-points">
+                <li>
+                  Work with the product team on creating and shipping new
+                  features
+                </li>
+                <li>
+                  Participate in solution discussions for product enhancements
+                </li>
+                <li>
+                  Collaborate with global teams across distributed time zones
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item reveal-right">
+            <div class="exp-period">Jan 2025 — Feb 2026</div>
+            <div>
+              <div class="exp-role">
+                Team Lead <span class="ser">+</span> Senior SWE
+              </div>
+              <div class="exp-company">Techversant InfoTech · Kochi</div>
+              <ul class="exp-points">
+                <li>
+                  Led a five-member frontend team driving code and performance
+                  reviews
+                </li>
+                <li>
+                  Shipped microfrontend &amp; monolithic SPAs for enterprise
+                  Canadian clients
+                </li>
+                <li>
+                  Cut UI render time by 50% via lazy loading, deferred render,
+                  change detection
+                </li>
+                <li>
+                  Unified ESLint/Prettier setup reduced code review time by 30%
+                </li>
+                <li>
+                  Defined scalable UI architecture and design standards across
+                  teams
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item reveal-left">
+            <div class="exp-period">Dec 2022 — Jan 2025</div>
+            <div>
+              <div class="exp-role">
+                Senior <span class="ser">Software</span> Engineer
+              </div>
+              <div class="exp-company">Brandoptics · Kochi</div>
+              <ul class="exp-points">
+                <li>
+                  Built SSR-enabled SPAs that lifted SEO and first-paint metrics
+                </li>
+                <li>
+                  Delivered reusable UI libraries and modular SPAs with
+                  pagination + filtering
+                </li>
+                <li>
+                  Increased Lighthouse performance by 20%, improving UX and
+                  client satisfaction
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item reveal-right">
+            <div class="exp-period">May 2020 — Dec 2022</div>
+            <div>
+              <div class="exp-role">
+                <span class="ser">Software</span> Engineer
+              </div>
+              <div class="exp-company">Feathersoft Info Solutions · Kochi</div>
+              <ul class="exp-points">
+                <li>
+                  Built dynamic UIs integrated with REST APIs and responsive
+                  layouts
+                </li>
+                <li>
+                  Maintained quality through Agile collaboration and peer code
+                  reviews
+                </li>
+                <li>Contributed to four successful product releases on time</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="work-section">
+      <div class="wrap">
+        <div class="section-tag">Selected Work</div>
+        <h2 class="heading-xl reveal">
+          Things I've <span class="ser">put into the world</span>.
+        </h2>
+
+        <div class="projects-stack">
+          <div class="project reveal-scale">
+            <div class="project-visual">
+              <div class="browser-frame">
+                <span class="dot"></span><span class="dot"></span
+                ><span class="dot"></span>
+                <span class="url">pixelbooksapp.com</span>
+              </div>
+              <div class="project-mock">
+                <div class="mock-line acc"></div>
+                <div class="mock-line" style="width: 70%"></div>
+                <div class="mock-line" style="width: 50%"></div>
+                <div class="mock-grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="num">— E-commerce</div>
+              <h3>Pixel <span class="ser">Books</span></h3>
+              <div class="tag-row">
+                <span>Angular v17</span><span>SSR</span><span>Tailwind</span
+                ><span>Firebase</span><span>RxJS</span>
+              </div>
+              <p>
+                SSR-powered eBook store and digital library — buy, borrow, and
+                read books online with secure transactions and snappy first
+                paint.
+              </p>
+              <a
+                href="https://www.pixelbooksapp.com"
+                target="_blank"
+                rel="noopener"
+                class="live-link"
+                >Visit live site →</a
+              >
+            </div>
+          </div>
+
+          <div class="project reveal-scale">
+            <div class="project-visual">
+              <div class="browser-frame">
+                <span class="dot"></span><span class="dot"></span
+                ><span class="dot"></span>
+                <span class="url">knottfar.com</span>
+              </div>
+              <div class="project-mock">
+                <div class="mock-line acc"></div>
+                <div class="mock-line" style="width: 60%"></div>
+                <div class="mock-grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div
+                  class="mock-line"
+                  style="width: 35%; margin-top: 8px"
+                ></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="num">— PWA Events</div>
+              <h3><span class="ser">Knott</span>far</h3>
+              <div class="tag-row">
+                <span>Angular</span><span>Bootstrap</span><span>PWA</span
+                ><span>REST APIs</span>
+              </div>
+              <p>
+                Progressive web app for weddings, receptions, and parties —
+                vendor booking with direct client–provider chat, installable
+                from the browser.
+              </p>
+              <a
+                href="https://www.knottfar.com"
+                target="_blank"
+                rel="noopener"
+                class="live-link"
+                >Visit live site →</a
+              >
+            </div>
+          </div>
+
+          <div class="project reveal-scale">
+            <div class="project-visual">
+              <div class="browser-frame">
+                <span class="dot"></span><span class="dot"></span
+                ><span class="dot"></span>
+                <span class="url">teledoc.app</span>
+              </div>
+              <div class="project-mock">
+                <div class="mock-line acc-2"></div>
+                <div class="mock-line" style="width: 55%"></div>
+                <div class="mock-grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div
+                  class="mock-line"
+                  style="width: 75%; margin-top: 8px"
+                ></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="num">— Healthcare</div>
+              <h3>Tele<span class="ser">Doc</span></h3>
+              <div class="tag-row">
+                <span>Angular</span><span>Tailwind</span><span>RxJS</span
+                ><span>WebRTC</span>
+              </div>
+              <p>
+                Telehealth platform for booking virtual appointments and
+                conducting secure video consultations between doctors and
+                patients.
+              </p>
+            </div>
+          </div>
+
+          <div class="project reveal-scale">
+            <div class="project-visual">
+              <div class="browser-frame">
+                <span class="dot"></span><span class="dot"></span
+                ><span class="dot"></span>
+                <span class="url">service-request.app</span>
+              </div>
+              <div class="project-mock">
+                <div class="mock-line acc"></div>
+                <div class="mock-line" style="width: 70%"></div>
+                <div class="mock-line" style="width: 50%"></div>
+                <div class="mock-line" style="width: 80%"></div>
+                <div class="mock-grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="num">— Enterprise</div>
+              <h3>Service <span class="ser">Request</span></h3>
+              <div class="tag-row">
+                <span>Angular v20</span><span>TypeScript</span
+                ><span>Tailwind</span><span>RxJS</span>
+              </div>
+              <p>
+                <strong>Enterprise web app</strong> that lets users request and
+                manage service submissions with a workflow that scales across
+                business units.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="contact-eyebrow">— Available for collaboration</div>
+        <h2 class="reveal">
+          Got a frontend<br />problem worth <span class="ser">solving</span> ?
+        </h2>
+        <a href="mailto:allenpallath@gmail.com" class="email-btn">
+          allenpallath@gmail.com
+          <span class="arr">→</span>
+        </a>
+        <div class="contact-secondary">
+          <a
+            href="https://github.com/allenpallath"
+            target="_blank"
+            rel="noopener"
+            >github.com/allenpallath</a
+          >
+          <a
+            href="https://linkedin.com/in/allenpallath"
+            target="_blank"
+            rel="noopener"
+            >linkedin.com/in/allenpallath</a
+          >
+          <a href="tel:+919946279941">+91 9946279941</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div>© 2026 — Allen Thomas Pallath</div>
+        <div>Built with care</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
